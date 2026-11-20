@@ -1,5 +1,7 @@
 # Miami Aqua Experience: Landing Page + Booking Checkout
 
+**Live preview:** https://i-redspector.github.io/miami-aqua-landing/ (GitHub Pages, checkout runs in preview mode: no card is charged)
+
 A one-page sales funnel for **Wake Surfing** and **E-Foil / E-Surf** (2-hour experiences, $350 each), with a full checkout:
 
 1. **Experience**: pick Wake Surfing or E-Foil / E-Surf

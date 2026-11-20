@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miami Aqua Experience | Wake Surfing & E-Foil in Miami</title>
+  <meta name="description" content="Book a 2-hour wake surfing or e-foil / e-surf experience in Miami. Gear, coaching and boat included. $350 per experience." />
+  <meta property="og:title" content="Miami Aqua Experience" />
+  <meta property="og:description" content="Wake surfing and e-foil sessions on Miami water. Book your 2-hour experience." />
+  <meta property="og:image" content="assets/media/hero-poster.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo">MIAMI<span>AQUA</span></a>
+    <nav class="nav-links">
+      <a href="#experiences">Experiences</a>
+      <a href="#how">How it works</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#book" class="btn btn-sm">Book now</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata"></video>
+    <div class="hero-shade"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Biscayne Bay · Miami, FL</p>
+      <h1>Ride the<br /><em>Miami water</em></h1>
+      <p class="hero-sub">2-hour wake surfing and e-foil sessions with a pro crew. No experience needed. We bring the boat, the boards and the coaching.</p>
+      <div class="hero-cta">
+        <a href="#book" class="btn btn-lg">Book your session · $350</a>
+        <a href="#experiences" class="btn btn-ghost btn-lg">See experiences</a>
+      </div>
+      <ul class="hero-trust">
+        <li><strong>2 hrs</strong> on the water</li>
+        <li><strong>All gear</strong> included</li>
+        <li><strong>Beginners</strong> welcome</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section class="section" id="experiences">
+    <div class="wrap">
+      <p class="eyebrow dark">Pick your ride</p>
+      <h2>Two ways to fly</h2>
+      <div class="cards">
+        <article class="card" data-service="wakesurf">
+          <div class="card-media">
+            <video muted loop playsinline preload="metadata" data-media="wakesurf"></video>
+            <span class="tag">2-hour experience</span>
+          </div>
+          <div class="card-body">
+            <h3>Wake Surfing</h3>
+            <p>Surf an endless wave behind our wake boat, rope-free once you're up. Coaching from your first pop-up to carving the pocket.</p>
+            <ul class="checks">
+              <li>Private boat + captain</li>
+              <li>Pro coaching for every level</li>
+              <li>Boards, vests & drinks</li>
+            </ul>
+            <div class="card-foot">
+              <div class="price"><span>$350</span> / 2 hrs</div>
+              <button class="btn" data-pick="wakesurf">Book Wake Surf</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-service="efoil">
+          <div class="card-media">
+            <video muted loop playsinline preload="metadata" data-media="efoil"></video>
+            <span class="tag">2-hour experience</span>
+          </div>
+          <div class="card-body">
+            <h3>E-Foil / E-Surf</h3>
+            <p>Hover above the bay on an electric hydrofoil, or cruise on an e-surfboard. Silent, smooth and easy to learn.</p>
+            <ul class="checks">
+              <li>Latest e-foil & e-surf boards</li>
+              <li>Step-by-step instructor</li>
+              <li>Helmet, vest & comms</li>
+            </ul>
+            <div class="card-foot">
+              <div class="price"><span>$350</span> / 2 hrs</div>
+              <button class="btn" data-pick="efoil">Book E-Foil</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section alt" id="how">
+    <div class="wrap">
+      <p class="eyebrow dark">Simple as 1-2-3</p>
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><span>1</span><h4>Pick your ride</h4><p>Wake surfing or e-foil / e-surf.</p></li>
+        <li><span>2</span><h4>Choose a slot</h4><p>9:30 AM, 12:30 PM or 3:30 PM.</p></li>
+        <li><span>3</span><h4>Show up & ride</h4><p>We text you the meeting point and handle the rest.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GALLERY (filled from assets/media/gallery.json) -->
+  <section class="section" id="gallery">
+    <div class="wrap">
+      <p class="eyebrow dark">From the water</p>
+      <h2>See it in action</h2>
+      <div class="gallery" id="galleryGrid"></div>
+      <p class="center"><a class="btn btn-ghost-dark" href="https://www.instagram.com/miami.aquaexperience" target="_blank" rel="noopener">Follow @miami.aquaexperience</a></p>
+    </div>
+  </section>
+
+  <!-- BOOKING / CHECKOUT -->
+  <section class="section book" id="book">
+    <div class="wrap narrow">
+      <p class="eyebrow">Secure your spot</p>
+      <h2 class="light">Book your experience</h2>
+
+      <div class="checkout" id="checkout">
+        <ol class="progress" id="progress">
+          <li class="active">Experience</li>
+          <li>Date & time</li>
+          <li>Riders</li>
+          <li>Pay</li>
+        </ol>
+
+        <!-- STEP 1 -->
+        <div class="step active" data-step="1">
+          <h3>Choose your experience</h3>
+          <div class="options" id="serviceOptions"></div>
+          <div class="step-nav"><span></span><button class="btn" data-next>Continue</button></div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step" data-step="2">
+          <h3>Pick a date & time</h3>
+          <div class="date-time">
+            <div class="calendar" id="calendar" aria-label="Choose a date"></div>
+            <div class="slots-wrap">
+              <p class="slots-label" id="slotsLabel">Select a date first</p>
+              <div class="slots" id="slots"></div>
+            </div>
+          </div>
+          <div class="step-nav"><button class="btn btn-link" data-back>Back</button><button class="btn" data-next>Continue</button></div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step" data-step="3">
+          <h3>Who's riding?</h3>
+          <label class="field">
+            <span>Number of people</span>
+            <div class="stepper">
+              <button type="button" id="guestMinus" aria-label="Fewer people">−</button>
+              <output id="guestCount">1</output>
+              <button type="button" id="guestPlus" aria-label="More people">+</button>
+            </div>
+          </label>
+          <div id="guestNames"></div>
+          <label class="field">
+            <span>Phone number <em>(we'll text your confirmation)</em></span>
+            <input type="tel" id="phone" autocomplete="tel" placeholder="(305) 555-0123" required />
+          </label>
+          <label class="field">
+            <span>Email <em>(for your receipt)</em></span>
+            <input type="email" id="email" autocomplete="email" placeholder="you@email.com" />
+          </label>
+          <div class="step-nav"><button class="btn btn-link" data-back>Back</button><button class="btn" data-next>Review order</button></div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step" data-step="4">
+          <h3>Review & pay</h3>
+          <dl class="summary" id="summary"></dl>
+          <label class="agree"><input type="checkbox" id="agree" /> I agree to the safety waiver and cancellation policy (free reschedule up to 24 hrs before).</label>
+          <div class="step-nav"><button class="btn btn-link" data-back>Back</button><button class="btn btn-lg" id="payBtn">Pay securely</button></div>
+          <p class="secure">🔒 Payments are processed securely by Stripe. We never see your card details.</p>
+        </div>
+
+        <!-- DONE -->
+        <div class="step" data-step="done">
+          <div class="done">
+            <div class="done-icon">✓</div>
+            <h3>You're booked!</h3>
+            <p id="doneText">We've got your spot. You'll get a text with the meeting point before your session.</p>
+            <a href="#top" class="btn">Back to top</a>
+          </div>
+        </div>
+
+        <p class="error" id="error" role="alert"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap narrow">
+      <p class="eyebrow dark">Good to know</p>
+      <h2>FAQ</h2>
+      <details><summary>Do I need any experience?</summary><p>Nope. Most of our riders are first-timers. Your instructor walks you through everything and stays with you the whole session.</p></details>
+      <details><summary>Is the $350 per person?</summary><p>$350 covers the full 2-hour private experience for your group. Add everyone's name at checkout so we can prepare gear.</p></details>
+      <details><summary>What should I bring?</summary><p>Swimwear, sunscreen, a towel and good vibes. We provide boards, life vests, water and helmets for e-foil.</p></details>
+      <details><summary>What if the weather is bad?</summary><p>If conditions aren't safe, we'll reschedule you for free or give you a full refund.</p></details>
+      <details><summary>Can I reschedule?</summary><p>Yes, free of charge up to 24 hours before your session.</p></details>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <a href="#top" class="logo">MIAMI<span>AQUA</span></a>
+      <p>Wake surfing & e-foil experiences in Miami, FL</p>
+      <a href="https://www.instagram.com/miami.aquaexperience" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <a href="#book" class="sticky-cta hide" id="stickyCta">Book now · $350</a>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -50,6 +50,9 @@
     entries.forEach((e) => { const v = e.target; e.isIntersecting ? v.play().catch(() => {}) : v.pause(); });
   }, { threshold: 0.5 }) : null;
   $$('.card video, .gallery video').forEach((v) => io && io.observe(v));
+  // Hero: some phones hold autoplay until the video can play
+  const hv = $('#heroVideo');
+  if (hv) hv.addEventListener('canplay', () => hv.play().catch(() => {}), { once: true });
 
   // Gallery from assets/media/gallery.json
   fetch('assets/media/gallery.json').then((r) => (r.ok ? r.json() : [])).then((items) => {

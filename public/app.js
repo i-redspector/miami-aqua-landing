@@ -4,6 +4,7 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
   const money = (n) => '$' + n.toLocaleString('en-US');
+  const yearEl = $('#year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const state = {
     step: 1,

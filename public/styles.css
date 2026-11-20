@@ -220,3 +220,25 @@ details p { color: var(--muted); margin: .75rem 0 0; }
   .hero h1, .hero-sub, .hero-trust { text-shadow: 0 2px 18px rgba(0, 0, 0, .45); }
   .hero h1 em { color: #3fe0f0; }
 }
+
+/* Full company name logo */
+.logo { display: inline-flex; flex-direction: column; line-height: .9; white-space: nowrap; }
+.logo small { font-family: var(--body); font-size: .56rem; font-weight: 700; letter-spacing: .5em; margin-top: 4px; opacity: .85; }
+.logo b { font-weight: 400; }
+
+/* Keep riders in frame: they sit in the lower half of these vertical clips */
+.card-media video { object-position: center 100%; }
+
+/* Phones: let her be seen. Lighter top, text compact at the bottom */
+@media (max-width: 899px) {
+  .hero-shade { background: linear-gradient(180deg, rgba(6, 33, 46, .45) 0%, rgba(6, 33, 46, 0) 22%, rgba(6, 33, 46, 0) 48%, rgba(6, 33, 46, .85) 74%, rgba(6, 33, 46, .96) 100%); }
+  .hero-inner { padding-bottom: 28px; }
+  .hero h1 { font-size: clamp(2.8rem, 12vw, 4.2rem); }
+  .hero .eyebrow { font-size: .7rem; margin-bottom: .5rem; }
+  .hero-sub { font-size: .98rem; margin: .75rem 0 1.1rem; }
+  .hero-cta .btn-ghost { display: none; }
+  .hero-cta .btn { width: 100%; }
+  .hero-trust { margin-top: 1.1rem; gap: .25rem 1.4rem; font-size: .8rem; }
+  .hero-trust strong { font-size: 1.25rem; }
+}
+@media (max-width: 420px) { .hero-sub { display: none; } }

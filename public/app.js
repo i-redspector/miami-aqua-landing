@@ -54,10 +54,11 @@
   const hv = $('#heroVideo');
   if (hv) hv.addEventListener('canplay', () => hv.play().catch(() => {}), { once: true });
 
-  // Gallery from assets/media/gallery.json
+  // Gallery from assets/media/gallery.json (section + menu link hidden until media is added)
+  function hideGallery() { $('#gallery').hidden = true; $$('a[href="#gallery"]').forEach((a) => { a.hidden = true; }); }
   fetch('assets/media/gallery.json').then((r) => (r.ok ? r.json() : [])).then((items) => {
     const grid = $('#galleryGrid');
-    if (!items.length) { $('#gallery').hidden = true; return; }
+    if (!items.length) { hideGallery(); return; }
     items.slice(0, 12).forEach((it) => {
       const a = document.createElement('a');
       a.className = 'g-item';
@@ -77,7 +78,7 @@
       }
       grid.appendChild(a);
     });
-  }).catch(() => { $('#gallery').hidden = true; });
+  }).catch(hideGallery);
 
   // Nav shadow on scroll + sticky CTA visibility
   const nav = $('#nav'), sticky = $('#stickyCta'), book = $('#book');

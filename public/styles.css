@@ -242,3 +242,20 @@ details p { color: var(--muted); margin: .75rem 0 0; }
   .hero-trust strong { font-size: 1.25rem; }
 }
 @media (max-width: 420px) { .hero-sub { display: none; } }
+
+/* Dolphin badge on the hero video */
+.hero-badge { position: absolute; z-index: 3; left: 16px; top: 84px; margin: 0; padding: .45rem .8rem; border-radius: 999px; background: rgba(6, 33, 46, .7); backdrop-filter: blur(6px); color: #fff; font-size: .78rem; font-weight: 700; }
+@media (min-width: 900px) {
+  .hero-badge { left: auto; top: auto; right: calc(max(40px, (100vw - 1140px) / 2) + 18px); bottom: calc(50% - min(38vh, 350px) + 40px); max-width: 300px; }
+}
+
+/* WhatsApp */
+.wa-float { position: fixed; right: 16px; bottom: 88px; z-index: 45; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: #25d366; color: #fff; box-shadow: 0 10px 24px -8px rgba(0, 0, 0, .5); transition: transform .15s; }
+.wa-float:hover { transform: scale(1.06); }
+@media (min-width: 761px) { .wa-float { bottom: 24px; right: 24px; } }
+.foot-links { display: flex; gap: 1.25rem; }
+.secure a { color: var(--sea-deep); font-weight: 700; }
+@media (max-width: 760px) {
+  .wa-float { bottom: 16px; width: 54px; height: 54px; }
+  .sticky-cta { right: 82px; }
+}

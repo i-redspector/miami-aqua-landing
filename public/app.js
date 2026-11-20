@@ -4,6 +4,12 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
   const money = (n) => '$' + n.toLocaleString('en-US');
+  if (C.whatsapp) {
+    const wa = `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(C.whatsappMessage || '')}`;
+    $$('[data-wa]').forEach((a) => { a.href = wa; });
+  } else {
+    $$('[data-wa]').forEach((a) => { (a.closest('p') || a).hidden = true; });
+  }
   const yearEl = $('#year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const state = {

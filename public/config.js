@@ -6,6 +6,9 @@
 (function (root) {
   const CONFIG = {
     business: 'Miami Aqua Experience',
+    // WhatsApp: digits only, with country code. Used by every WhatsApp button.
+    whatsapp: '13058536859',
+    whatsappMessage: "Hi Miami Aqua Experience! I'd like to book a session.",
     currency: 'usd',
     timezone: 'America/New_York',
 
